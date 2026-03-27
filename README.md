@@ -143,9 +143,34 @@ See the example notebook [`Panoptic BSB-Example.ipynb`](Panoptic%20BSB-Example.i
 
 ---
 
-## Panoptic Generator
+## Panoptic Generator v2
 
-We also developed the **[Panoptic-Generator](https://github.com/abilius-app/Panoptic-Generator)**, a tool for building remote sensing panoptic segmentation datasets in the COCO annotation format using GIS software such as ArcMap. See the paper for detailed instructions on the annotation workflow.
+This repository includes the **Panoptic Generator v2** ([`panoptic-generator/`](panoptic-generator/)), a complete rewrite of the original [C++ tool](https://github.com/abilius-app/Panoptic-Generator) in Python. It allows you to build your own remote sensing segmentation datasets from georeferenced imagery.
+
+### Features
+
+- **GUI + CLI** — desktop application (PyQt5) or command-line for automation
+- **Simplified input** — just an image + annotation shapefile (or pre-rasterized masks for legacy workflows)
+- **Multiple output formats** — COCO Panoptic, COCO Instance, YOLO, Pascal VOC
+- **Streaming pipeline** — constant memory usage regardless of dataset size
+- **Spatial indexing** — fast geometry lookup with R-tree
+- **Auto-detect categories** — reads class columns from shapefiles (numeric or text)
+- **Cross-platform** — runs on Windows, Linux, and macOS
+
+### Quick Start
+
+```bash
+cd panoptic-generator
+pip install -r requirements.txt
+
+# Launch GUI
+python main.py
+
+# Or use CLI
+python main.py generate --image image.tif --annotation-shapefile labels.shp --output-dir ./dataset
+```
+
+See the [original C++ version](https://github.com/abilius-app/Panoptic-Generator) for the GIS-based annotation workflow described in the paper.
 
 ---
 
