@@ -1,4 +1,4 @@
-# BSB Aerial Dataset
+﻿# BSB Aerial Dataset
 
 A panoptic segmentation dataset of aerial imagery from Brasilia, Brazil, introduced in the paper **"Panoptic Segmentation Meets Remote Sensing"** published in *Remote Sensing* (MDPI), 2022.
 
@@ -87,17 +87,17 @@ The dataset contains **14 classes** divided into stuff (amorphous regions) and t
 
 ```
 bsb_dataset/
-├── annotations/
-│   ├── panoptic_train.json
-│   ├── panoptic_val.json
-│   ├── panoptic_test.json
-│   ├── instance_train.json
-│   ├── instance_val.json
-│   └── instance_test.json
-├── image_{train,val,test}/        # RGB aerial tiles (TIFF)
-├── panoptic_{train,val,test}/     # Panoptic masks (PNG)
-├── panoptic_stuff_{train,val,test}/ # Stuff-only masks (PNG)
-└── class_{train,val,test}/        # Semantic masks (PNG)
+â”œâ”€â”€ annotations/
+â”‚   â”œâ”€â”€ panoptic_train.json
+â”‚   â”œâ”€â”€ panoptic_val.json
+â”‚   â”œâ”€â”€ panoptic_test.json
+â”‚   â”œâ”€â”€ instance_train.json
+â”‚   â”œâ”€â”€ instance_val.json
+â”‚   â””â”€â”€ instance_test.json
+â”œâ”€â”€ image_{train,val,test}/        # RGB aerial tiles (TIFF)
+â”œâ”€â”€ panoptic_{train,val,test}/     # Panoptic masks (PNG)
+â”œâ”€â”€ panoptic_stuff_{train,val,test}/ # Stuff-only masks (PNG)
+â””â”€â”€ class_{train,val,test}/        # Semantic masks (PNG)
 ```
 
 ---
@@ -119,12 +119,12 @@ We used [Detectron2](https://github.com/facebookresearch/detectron2)'s **Panopti
 
 | Backbone | mIoU | Box AP | PQ |
 |----------|------|--------|----|
-| ResNet-50 | — | — | — |
+| ResNet-50 | â€” | â€” | â€” |
 | **ResNet-101** | **93.9** | **47.7** | **64.9** |
 
-- **mIoU** (mean Intersection over Union) — semantic segmentation quality
-- **Box AP** (Average Precision) — instance detection quality
-- **PQ** (Panoptic Quality) — unified panoptic metric combining recognition and segmentation
+- **mIoU** (mean Intersection over Union) â€” semantic segmentation quality
+- **Box AP** (Average Precision) â€” instance detection quality
+- **PQ** (Panoptic Quality) â€” unified panoptic metric combining recognition and segmentation
 
 ### Per-Class Results
 
@@ -149,13 +149,13 @@ This repository includes the **Panoptic Generator v2** ([`panoptic-generator/`](
 
 ### Features
 
-- **GUI + CLI** — desktop application (PyQt5) or command-line for automation
-- **Simplified input** — just an image + annotation shapefile (or pre-rasterized masks for legacy workflows)
-- **Multiple output formats** — COCO Panoptic, COCO Instance, YOLO, Pascal VOC
-- **Streaming pipeline** — constant memory usage regardless of dataset size
-- **Spatial indexing** — fast geometry lookup with R-tree
-- **Auto-detect categories** — reads class columns from shapefiles (numeric or text)
-- **Cross-platform** — runs on Windows, Linux, and macOS
+- **GUI + CLI** â€” desktop application (PyQt5) or command-line for automation
+- **Simplified input** â€” just an image + annotation shapefile (or pre-rasterized masks for legacy workflows)
+- **Multiple output formats** â€” COCO Panoptic, COCO Instance, YOLO, Pascal VOC
+- **Streaming pipeline** â€” constant memory usage regardless of dataset size
+- **Spatial indexing** â€” fast geometry lookup with R-tree
+- **Auto-detect categories** â€” reads class columns from shapefiles (numeric or text)
+- **Cross-platform** â€” runs on Windows, Linux, and macOS
 
 ### Quick Start
 
@@ -196,7 +196,7 @@ If you use this dataset or the annotation tools in your research, please cite:
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under [CC BY 4.0](LICENSE).
 
 ## Contact
 
